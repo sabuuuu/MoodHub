@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Heart, User, LogOut, Menu, X } from 'lucide-react'
+import { Heart, LogOut, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { supabase } from '@/lib/supabase'
 import type { User as SupabaseUser } from '@supabase/supabase-js'
@@ -68,10 +68,6 @@ export function Navbar() {
                   Timers
                 </Link>
                 <div className="flex items-center space-x-4">
-                  <Button variant="ghost" size="sm" className="flex items-center space-x-2">
-                    <User className="h-4 w-4" />
-                    <span className="text-sm">{user.email}</span>
-                  </Button>
                   <Button
                     variant="outline"
                     size="sm"
@@ -151,7 +147,6 @@ export function Navbar() {
                   Timers
                 </Link>
                 <div className="px-4 py-2 border-t border-gray-200">
-                  <p className="text-sm text-gray-600 mb-2">{user.email}</p>
                   <Button
                     variant="outline"
                     size="sm"
